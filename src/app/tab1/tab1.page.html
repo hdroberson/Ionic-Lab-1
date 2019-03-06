@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Super Social
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <ion-card class="post-form">
+      <ion-input class="post-text" [(ngModel)]="text" name="post" type="text" placeholder="Say something"></ion-input>
+      <ion-button (click)="createPost();" class="post-btn" type="small" color="primary"><ion-icon name="send"></ion-icon></ion-button>
+    </ion-card>
+
+    <div class="feed">
+      <ion-card *ngFor="let post of posts">
+        <ion-card-header>
+          <ion-card-title>{{post}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+
+
+</ion-content>
